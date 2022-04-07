@@ -1,6 +1,6 @@
 from paho.mqtt.client import Client
 
-def on_message(mqtt, userdata, msg):
+def on_message(mqttc, userdata, msg):
 	print("MESSAGE:", userdata, msg.topic, msq.qos, msg.payload, msg.retain)
 	mqttc.publish('clients/test', msg.payload)
 	
